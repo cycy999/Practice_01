@@ -8,13 +8,21 @@
 
 import UIKit
 
+#if PRACTIVEDEV
+let testString = "this is a dev target"
+#elseif PRACTIVETEST
+let testString = "this is a test target"
+#else
+let testString = "this is a normal target"
+#endif
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print(testString)
     }
-
 
 }
 
